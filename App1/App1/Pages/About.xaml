@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.About"
+             Title="Hakkımızda"
+             Icon="Password.png"
+              >
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source = "construction.png" Margin="50,100,50,50" >
+                <Image.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">30</On>
+                        <On Platform="Android,Windows">300</On>
+                    </OnPlatform>
+                </Image.HeightRequest>
+            </Image>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

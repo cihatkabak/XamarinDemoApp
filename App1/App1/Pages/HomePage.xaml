@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.HomePage"
+             Title="Anasayfa">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation = "Vertical" Margin = "3,3,3,3" >
+            
+            <Frame OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,2,2,2" HeightRequest="150" WidthRequest="150"  Padding="0"  CornerRadius="10">
+                <Image Source = "c100mark2.png"  >
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android,Windows">100</On>
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer 
+                        Tapped="OnImageNameTapped"
+                        NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+                <Label Text = "Canon EOS C100 Mark II" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Comic Sans"  />
+
+            <Frame OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,20,2,2" HeightRequest="150" WidthRequest="150"  Padding="0"  CornerRadius="10">
+                <Image Source = "canon450d.png"  >
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android,Windows">100</On>
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="OnImageNameTapped2"
+                        NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+                <Label Text = "Canon EOS 450D" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Comic Sans"  />
+
+            <Frame OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,20,2,2" HeightRequest="150" WidthRequest="150"  Padding="0"  CornerRadius="10">
+                <Image Source = "dedosps5e.png"  >
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android,Windows">100</On>
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="OnImageNameTapped3"
+                        NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+                <Label Text = "Dedolight SPS5E 5 Light Portable Lighting Kit" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Comic Sans"  />
+
+            <Frame OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,20,2,2" HeightRequest="150" WidthRequest="150"  Padding="0"  CornerRadius="10">
+                <Image Source = "mark3.png"  >
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android,Windows">100</On>
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="OnImageNameTapped4"
+                        NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+                <Label Text = "Canon EOS 5D Mark III " FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="Comic Sans"  />
+
+            <Frame OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,20,2,2" HeightRequest="150" WidthRequest="150"  Padding="0"  CornerRadius="10">
+                    <Image Source = "PSAGHPX250.png"  >
+                    <Image.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">30</On>
+                            <On Platform="Android,Windows">100</On>
+                        </OnPlatform>
+                    </Image.HeightRequest>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="OnImageNameTapped5"
+                        NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </Frame>
+                <Label Text = "Panasonic AG-HPX250" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="Center" FontFamily="Comic Sans" Margin="0,0,0,15"  />
+
+
+
+        </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Pages.LoginPage"
+             Title="Giriş">
+  <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="0" x:Name="gLogin">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="60"/>
+      <RowDefinition Height="50"/>
+      <RowDefinition Height="50"/>
+      <RowDefinition Height="25"/>
+      <RowDefinition Height="50"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="35"/>
+      <ColumnDefinition Width="90"/>
+      <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
+   
+
+    <Label Text="{Binding ErrorText}" x:Name="Error_label" TextColor="Red" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" IsVisible="false"></Label>
+
+    <Image Source="username.png" Grid.Column="0" Grid.Row="1"/>
+    <Entry x:Name="EntryUsername" Placeholder="Kullanıcı Adı" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="18" Text=""></Entry>
+
+    <Image Source="password.png" Grid.Column="0" Grid.Row="2"/>
+    <Entry x:Name="EntryPassword" Placeholder="Şifre" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="18" IsPassword="True" Text=""></Entry>
+
+        <Label Grid.Column="0" Grid.Row="3"  Grid.ColumnSpan="22"  Text="  Şifremi Unuttum" TextColor="Black">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer 
+                        Tapped="Tapped"
+                        NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+        <Label Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="22" HorizontalOptions="End" Text="Kayıt Ol" TextColor="Black">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer 
+                        Tapped="Tapped"
+                        NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Button x:Name="btnSubmit" Text="Giriş Yap" Clicked="Login_Procedure" TextColor="Black" BorderRadius="50" Grid.Row="4" Grid.ColumnSpan="25" VerticalOptions="Fill" FontAttributes="Bold"></Button>
+  </Grid>
+</ContentPage>

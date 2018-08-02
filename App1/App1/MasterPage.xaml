@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MasterPage"
+             Padding="0,0,0,0"
+             Title="Titles"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="toolHouseLogo.png" BackgroundColor="#008AFF" >
+                <Image.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">30</On>
+                        <On Platform="Android,Windows">56</On>
+                    </OnPlatform>
+                </Image.HeightRequest>
+            </Image>
+            <ListView x:Name = "lstScreens" >
+                <ListView.ItemTemplate >
+                <DataTemplate>
+                        <ViewCell>
+                            <Frame  OutlineColor="Blue" Grid.Row="0" Grid.Column="0" Margin="2,2,2,2" HeightRequest="50" Padding="0"  CornerRadius="10">
+                                <StackLayout Orientation = "Horizontal" Margin = "3,3,3,3" >
+                                    <Image Source = "{Binding IconSource}" >
+                                        <Image.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="iOS">30</On>
+                                                <On Platform="Android,Windows">30</On>
+                                            </OnPlatform>
+                                        </Image.HeightRequest>
+                                    </Image>
+                                    <Label Text = "{Binding Title}" FontSize="Medium" VerticalOptions="Center" FontFamily="Comic Sans"  />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+
+<!--<StackLayout VerticalOptions="FillAndExpand">
+    <ListView x:Name="lstScreens" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell TextColor="BlueViolet" Text="{Binding Title}"></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>-->
+
+
+
+<!--<StackLayout>
+        <ListView x:Name="lstScreens">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type MasterPageItem}">
+                    <local:MasterPageItem Title="Contacts" IconSource="contacts.png" TargetType="{x:Type Contacts}" />
+                    <local:MasterPageItem Title="TodoList" IconSource="todo.png" TargetType="{x:Type LoginPage}" />
+                    <local:MasterPageItem Title="Reminders" IconSource="reminders.png" TargetType="{x:Type SignUp}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>-->
